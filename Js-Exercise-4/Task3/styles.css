@@ -1,0 +1,40 @@
+#container {
+    margin: auto;
+    margin-top: 10%;
+}
+
+#container form {
+    display: flex;
+    justify-content: center;
+}
+
+#container form button {
+    height: 55px;
+    width: 120px;
+    margin-top: 1%;
+}
+
+#container input {
+    margin: 1%;
+    padding: 1%;
+    border: 2px solid black;
+}
+
+#container table {
+    margin: auto;
+    width: 32%;
+    border: 1px solid black;
+}
+
+table td {
+    padding: 2%;
+}
+
+table div {
+    font-size: 20px;
+}
+
+table button {
+    font-size: 20px;
+    width: 100px;
+}

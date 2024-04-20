@@ -1,0 +1,38 @@
+<!-- Task14 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      function sortArrayByName(array) {
+        array.sort((a, b) => (a.Name > b.Name ? -1 : 1));
+        array.forEach(obj => {
+    console.log(`Id: ${obj.Id}, Name: ${obj.Name}, Age: ${obj.Age}`);
+  });
+      }
+
+      function sortArrayByAge(array) {
+  array.sort((a, b) => a.Age - b.Age);
+
+  array.forEach(obj => {
+    console.log(`Id: ${obj.Id}, Name: ${obj.Name}, Age: ${obj.Age}`);
+  });
+}
+
+const arrayOfObjects = [
+  { Id: 1, Name: 'Alice', Age: 25 },
+  { Id: 2, Name: 'Bob', Age: 30 },
+  { Id: 10, Name: 'Charlie', Age: 22 },
+  { Id: 3, Name: 'C', Age: 21 },
+  { Id: 4, Name: 'Cha', Age: 24 },
+  { Id: 5, Name: 'Ch', Age: 26 },
+  { Id: 6, Name: 'Char', Age: 28 },
+  { Id: 7, Name: 'Charl', Age: 20 },
+  { Id: 8, Name: 'Charli', Age: 22 },
+  { Id: 9, Name: 'Charliei', Age: 24 },
+];
+
+sortArrayByAge(arrayOfObjects);
+sortArrayByName(arrayOfObjects);
+    </script>
+  </head>
+</html>

@@ -1,0 +1,25 @@
+<!-- Task1.2 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function hideContent(val) {
+            let valArr = val.split("");
+            const idx = valArr.indexOf("@");
+
+            for(let i = 0; i < idx; ++i) {
+                if (i == 0 || i == 1 || i == idx - 1) {
+                    continue;
+                }
+                valArr[i] = "*";
+            }
+
+            val = valArr.join("");
+            console.log(val);
+        }
+
+        let val = prompt("Enter ur val: ");
+        hideContent(val);
+    </script>
+  </head>
+</html> 

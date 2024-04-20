@@ -1,0 +1,49 @@
+<!-- Task5 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function union() {
+            const n1 = array_a.length;
+            const n2 = array_b.length;
+
+            let resArr = [];
+            let unionSet = new Set(); 
+
+            for(let i = 0; i < n1; ++i) {
+                unionSet.add(array_a[i]);
+            }
+            for(let i = 0; i < n2; ++i) {
+                unionSet.add(array_b[i]);
+            }
+
+            return resArr = Array.from(unionSet);
+        }
+
+        function diff(arr1, arr2) {
+            const resArr = arr1.filter(item => !(arr2.includes(item)));
+
+            return resArr;
+        }
+
+        function intersect() {
+            const resArr = array_a.filter((item) => (array_b.includes(item)));
+
+            return resArr;      
+        }
+
+        const array_a = [0,1,2,3];
+        const array_b = [3,4,5];
+
+        const unionArr = union();
+        const diffArr = diff(array_a, array_b);
+        const diffArr1 = diff(array_b, array_a);
+        const intersectArr = intersect();
+
+        console.log(unionArr);
+        console.log(diffArr);
+        console.log(diffArr1);
+        console.log(intersectArr);
+    </script>
+  </head>
+</html>

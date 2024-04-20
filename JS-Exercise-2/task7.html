@@ -1,0 +1,24 @@
+<!-- Task7 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function findMonth(dateStr) {
+          let tempStr = "";
+          tempStr += dateStr.slice(3, 5) + "/";
+          tempStr += dateStr.slice(0, 2) + "/";
+          tempStr += dateStr.slice(6);
+
+          const date = new Date(tempStr);
+          console.log(date);
+
+          const month = date.toLocaleString('en-us', { month: 'long' });
+          return month;
+        }
+        
+        const dateStr = prompt("Enter the date: ");
+
+        console.log(findMonth(dateStr));
+    </script>
+  </head>
+</html>

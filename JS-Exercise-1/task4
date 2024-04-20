@@ -1,0 +1,62 @@
+<!-- Task4 -->
+<!-- <!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      const n = prompt("Enter the val of n: ", 0);
+      for(let i = 0; i < Math.floor(n / 2) + 1; ++i) {
+        for(let j = 0; j <= i; ++j) {
+            document.write("*");
+        }
+
+        document.write("<br>");
+      }
+      for(let i = Math.floor(n / 2) + 1; i < n; ++i) {
+        for(let j = 0; j <= n - i - 1; ++j) {
+            document.write("*");
+        }
+
+        document.write("<br>");
+      }
+    </script>
+  </head>
+</html>  -->
+
+<!-- Task4 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      function makeArray(n, val) {
+        const matrix = Array(n).fill().map(() => 
+        Array(n).fill(val));
+        return matrix;
+      }
+
+      const n = +prompt("Enter the val of n: ", 0);
+      let arr = makeArray(n, " ");
+
+      const halfRange = Math.floor(n / 2) + 1;
+
+      for(let i = 0; i < n; ++i) {
+        if (i < halfRange) {
+          arr[i].fill("*", 0, i + 1);
+        }
+        else {
+          arr[i].fill("*", 0, n - i);
+        }
+      }
+      
+      for(let i = 0; i < n; ++i) {
+        for(let j = 0; j < n; ++j) {
+          if (arr[i][j] == " ") {
+            document.write('&nbsp;');
+            continue;
+          }
+          document.write(arr[i][j]);
+        }
+        document.write("<br>");
+      }
+    </script>
+  </head>
+</html> 

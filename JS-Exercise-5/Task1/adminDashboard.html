@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">      
+    <link rel="stylesheet" href="adminStyles.css">
+</head>
+<body onload="onLoad()">
+<div class="dashboard-container">
+    <h2>Admin Dashboard</h2>
+    <div class="action-buttons">
+        <input type="text" placeholder="Add Course" id="addCourseInput">
+        <button id="addCourse">Add Course</button>
+    </div>
+    <h3>Courses</h3>
+    <ul class="course-list" id="courseList"></ul>
+    <button onclick="logout()">Logout</button>
+</div>
+<div class="dashboard-container">
+    <h2>Students</h2>
+    <ul class="course-list" id="userList"></ul>
+</div>
+
+<div class="dashboard-container">Click on any student name to assign or unregister it from any particular course</div>
+
+<script src="adminLogic.js"></script>
+</body>
+</html>

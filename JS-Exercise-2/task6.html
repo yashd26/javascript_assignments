@@ -1,0 +1,24 @@
+<!-- Task6 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function num_string_range(startVal, endVal, jumpCount) {
+            let resArr = [];
+
+            let startIdx = static_array.indexOf(startVal);
+            let endIdx = static_array.indexOf(endVal);
+
+            while(startIdx < endIdx) {
+                resArr.push(static_array[startIdx]);
+                startIdx += jumpCount;
+            }
+
+            return resArr;
+        }
+
+        let static_array = [ "a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z" ];
+        console.log(num_string_range("a", "z", 2));
+    </script>
+  </head>
+</html>

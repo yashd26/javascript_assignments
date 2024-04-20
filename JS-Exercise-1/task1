@@ -1,0 +1,53 @@
+<!-- Task1 -->
+<!-- <!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      const n = +prompt("Enter the val of n: ", 0);
+        for(let i = 0; i < n; ++i) {
+            for(let j = 0; j < n; ++j) {
+                if (i == j || i + j == n - 1) {
+                    document.write("*");
+                }
+                else {
+                    document.write('&nbsp;');
+                }
+            }
+
+            document.write("<br>");
+        }    
+    </script>
+  </head>
+</html>  -->
+
+<!-- Task1 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+function makeArray(n, val) {
+        const matrix = Array(n).fill().map(() => 
+        Array(n).fill(val));
+        return matrix;
+      }
+
+      const n = +prompt("Enter the val of n: ", 0);
+      let arr = makeArray(n, " ");
+      for(let i = 0; i < n; ++i) {
+        arr[i][i] = "*";
+        arr[i][n - i - 1] = "*";    
+      }
+
+      for(let i = 0; i < n; ++i) {
+        for(let j = 0; j < n; ++j) {
+          if (arr[i][j] == " ") {
+            document.write('&nbsp;');
+            continue;
+          }
+          document.write(arr[i][j]);
+        }
+        document.write("<br>");
+      }
+    </script>
+  </head>
+</html> 

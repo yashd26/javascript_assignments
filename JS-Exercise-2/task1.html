@@ -1,0 +1,30 @@
+<!-- Task1 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+    function getElements(arr, n) {
+      const resArr = [];      
+      const arrSize = arr.length;
+
+      if (n > arrSize) {
+        return -1;
+      }
+      
+      for(let i = 0; i < n; ++i) {
+        resArr.push(arr[i]);
+      }
+      for(let i = 0; i < n; ++i) {
+        resArr.push(arr[arrSize - n + i]);
+      }
+
+      return resArr;
+    }
+
+const arr = [1, 2, 3, 4, 5, 6, 7];
+const n = prompt("Enter num: ") | 0;
+
+console.log(getElements(arr, n));
+    </script>
+  </head>
+</html> 

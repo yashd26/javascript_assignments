@@ -1,0 +1,24 @@
+<!-- Task12 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function string_chop(str, jumpCount) {
+          const resArr = [];
+          let i = 0;
+          const n = str.length;
+
+          while(i < n) {
+            resArr.push(str.substr(i, jumpCount));
+            i += jumpCount;
+          }
+
+          return resArr;
+        }
+
+        const input_length = 2;
+        const input_string = "RapidOpsSolution";
+        console.log(string_chop(input_string, input_length));
+    </script>
+  </head>
+</html>

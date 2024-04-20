@@ -1,0 +1,26 @@
+<!-- Task13 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function insertCommas(input_number) {
+            const resStr = input_number.toString().split("");
+            const n = resStr.length - 1;
+            let count = 0;
+
+            for(let i = n; i >= 0; --i) {
+                count++;
+                if (count == 3) {
+                    resStr.splice(i, 0, ",");
+                    count = 0;
+                }
+            }
+
+            return resStr.join("");
+        }
+
+        const input_number = 1023165454197;
+console.log(insertCommas(input_number));
+    </script>
+  </head>
+</html>

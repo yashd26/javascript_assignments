@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="signUpStyles.css">
+</head>
+<body onload="onLoad()">
+<div class="signup-container">
+    <h2>Signup</h2>
+    <form method="post" action="" onsubmit="handleSubmit(event)">
+        <p id="nameError" class="hide"></p>
+        <input type="text" placeholder="User Name" id="userName" required>
+        <p id="emailError" class="hide"></p>
+        <input type="text" placeholder="Email" id="email" required>
+        <p id="passError" class="hide"></p>
+        <input type="password" placeholder="Password" id="pass" required>
+        <p id="confirmPassError" class="hide"></p>
+        <input type="password" placeholder="Confirm Password" id="confirmPass" required>
+        <div class="select-field">
+            <select id="type">
+                <option value="admin">Admin</option>
+                <option value="user">User</option>
+            </select>
+        </div>
+        <button type="submit">Signup</button>
+    </form>
+    <p>Wanna <a href="login.html">signIn??</a></p>
+</div>
+
+<script src="signUp.js"></script>
+</body>
+</html>

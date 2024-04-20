@@ -1,0 +1,114 @@
+form {
+    margin-top: 400px;
+}
+
+.discs {
+    position: relative;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    margin: 10vmin auto 0;
+    width: 90vmin;
+    height: 35vmin;
+}
+
+.disc {
+    z-index: 1;
+    border-radius: 0.5vmin;
+    height: 5vmin;
+    pointer-events: none;
+    transition: order 0.3s step-end;
+}
+
+#finalTower .two {
+    margin: 0 8vmin;
+    width: 14vmin;
+    background: red;
+    margin-left: 630px;
+}
+
+#finalTower .three {
+    margin: 0 6vmin;
+    width: 18vmin;
+    background: blue;
+    margin-left: 610px;
+}
+
+#finalTower .four {
+    margin: 0 4vmin;
+    width: 22vmin;
+    background: green;
+    margin-left: 600px;
+}
+
+#finalTower .five {
+    margin: 0 2vmin;
+    width: 26vmin;
+    background: purple;
+    margin-left: 580px;
+}
+
+#finalTower .six {
+    width: 30vmin;
+    background: yellow;
+    margin-left: 565px;
+}
+
+.two {
+    margin: 0 8vmin;
+    width: 14vmin;
+    background: red;
+}
+
+.three {
+    margin: 0 6vmin;
+    width: 18vmin;
+    background: blue;
+}
+
+.four {
+    margin: 0 4vmin;
+    width: 22vmin;
+    background: green;
+}
+
+.five {
+    margin: 0 2vmin;
+    width: 26vmin;
+    background: purple;
+}
+
+.six {
+    width: 30vmin;
+    background: yellow;
+}
+
+body {
+    margin: 0;
+    background-color: #f8f8f8;
+}
+
+form {
+    text-align: center;
+}
+
+.tower {
+    position: absolute;
+    /* top: 7.5vmin; */
+    border-radius: 0.5vmin;
+    width: 3vmin;
+    height: 50vmin;
+    background: blanchedalmond;
+}
+
+.a {
+    left: 12.5vmin;
+}
+
+.b {
+    left: 42.5vmin;
+}
+
+.c {
+    left: 72.5vmin;
+}

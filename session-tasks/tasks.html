@@ -1,0 +1,120 @@
+<!-- Rotate matrix by n degree -->
+<!-- <!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      function makeArray(n, val) {
+    var arr = [];
+    for(let i = 0; i < n; i++) {
+        arr[i] = [];
+        for(let j = 0; j < n; j++) {
+            arr[i][j] = val;
+            val++;
+        }
+    }
+    return arr;
+}
+      let arr = makeArray(3, 1);
+      let newArr = makeArray(3, 1);
+
+      let n = +prompt("Enter the val of n: ");
+      if (n == 1) {
+        for(let i = 0; i < 3; ++i) {
+        for(let j = 0; j < 3; ++j) {
+            newArr[j][3 - i - 1] = arr[i][j];
+        }
+      }
+      console.log(newArr);
+      }
+      else if (n == 2) {
+        for(let i = 0; i < 3; ++i) {
+        for(let j = 0; j < 3; ++j) {
+            newArr[j][3 - i - 1] = arr[i][j];
+        }
+      }
+        for(let i = 0; i < 3; ++i) {
+        for(let j = 0; j < 3; ++j) {
+            arr[j][3 - i - 1] = newArr[i][j];
+        }
+      }
+      console.log(arr);
+      }
+      else if(n == 3) {
+        for(let i = 0; i < 3; ++i) {
+        for(let j = 0; j < 3; ++j) {
+            newArr[j][3 - i - 1] = arr[i][j];
+        }
+      }
+        for(let i = 0; i < 3; ++i) {
+        for(let j = 0; j < 3; ++j) {
+            arr[j][3 - i - 1] = newArr[i][j];
+        }
+      }
+        for(let i = 0; i < 3; ++i) {
+        for(let j = 0; j < 3; ++j) {
+            newArr[j][3 - i - 1] = arr[i][j];
+        }
+      }
+      console.log(newArr);
+      }
+    </script>
+  </head>
+</html>  -->
+
+
+<!-- Rotate matrix by 45 multiples -->
+<!-- <!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+      function makeArray(n, val) {
+    var arr = [];
+    for(let i = 0; i < n; i++) {
+        arr[i] = [];
+        for(let j = 0; j < n; j++) {
+            arr[i][j] = val;
+            val++;
+        }
+    }
+    return arr;
+}
+
+  function copyArray(arr1, arr2) {
+    for(let i = 0; i < 3; ++i) {
+      for(let j = 0; j < 3; ++j) {
+        arr[i][j] = newArr[i][j];
+      }
+    }
+  }
+
+      let arr = makeArray(3, 1);
+      let newArr = makeArray(3, 1);
+
+      let n = +prompt("Enter the val of n: ");
+        for(let i = 0; i < n; ++i) {
+          for(let i = 0; i < 3; ++i) {
+        for(let j = 0; j < 3; ++j) {
+            if ((i == 0 && j == 0) || (i == 0 && j == 1)) {
+              newArr[i][j + 1] = arr[i][j];
+            }
+            else if ((i == 2 && j == 1) || (i == 2 && j == 2)) {
+              newArr[i][j - 1] = arr[i][j];
+            }
+            else if ((i == 2 && j == 0) || (i == 1 && j == 0)) {
+              newArr[i - 1][j] = arr[i][j];
+            }
+            else if ((i == 0 && j == 2) || (i == 1 && j == 2)) {
+              newArr[i + 1][j] = arr[i][j];
+            }
+            else {
+              newArr[i][j] = arr[i][j];
+            }
+        }
+      }
+      copyArray();
+        }
+      console.log(arr);
+
+    </script>
+  </head>
+</html>  -->

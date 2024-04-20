@@ -1,0 +1,29 @@
+<!-- Task2 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+    function insertDash(inpString) {
+      let result = "";
+      let n = inpString.length;
+
+    for (let i = 0; i < n; i++) {
+      if (parseInt(inpString[i]) % 2 === 0 && parseInt(inpString[i + 1]) % 2 === 0) {
+        result += inpString[i] + "-";
+      } 
+      else {
+        result += inpString[i];
+      }
+    }
+    
+    return result;
+  }
+
+    const num = prompt("Enter ur num: ");
+    const res = insertDash(num);
+
+    console.log(res);
+
+    </script>
+  </head>
+</html>

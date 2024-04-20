@@ -1,0 +1,28 @@
+<!-- Task15 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function del(idx) {
+            if (idx >= static_array.length) {
+                alert("Error");
+                return;
+            }
+            static_array.splice(1, 1);
+        }
+        function insert(obj, idx) {
+            if (idx >= static_array.length) {
+                alert("Error");
+                return;
+            }
+            static_array.splice(1, 0, obj);
+        }
+
+        const static_array = [{name:  "Jack" , age : 23}, {name:  "Sam" , age : 12},  {name:  "Max" , age : 20} ]
+        del(1);
+        console.log(static_array);
+        insert({name: "Yash", age: 21}, 1);
+        console.log(static_array);
+    </script>
+  </head>
+</html>

@@ -1,0 +1,80 @@
+<!-- Task10 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function dateDifference1(startDate, endDate) {
+            const date1 = new Date(startDate);
+  const date2 = new Date(endDate);
+
+  const diff = date2.getTime() - date1.getTime();
+  const yearDiff = Math.floor(diff/1000/60/60/24/30/12);
+    const monthDiff = Math.floor(diff/1000/60/60/24/30) % 12;
+    const daysDiff = Math.floor(diff/1000/60/60/24) % 30.5;
+
+    console.log('difference = ' +
+    yearDiff + ' Year/s ' +  
+    monthDiff + ' Month/s ' + 
+      daysDiff + ' day/s ');
+}
+
+function dateDifference2(startDate, endDate) {
+  const date1 = new Date(startDate);
+  const date2 = new Date(endDate);
+
+  let diff = date2.getTime() - date1.getTime();
+    let monthDiff = Math.floor(diff/1000/60/60/24/30);
+    diff -= monthDiff*1000*60*60*24*30;
+            
+    let daysDiff = Math.floor(diff/1000/60/60/24);
+
+    console.log('difference = ' +
+    monthDiff + ' Month/s ' + 
+      daysDiff + ' day/s ');
+}
+
+function dateDifference3(startDate, endDate) {
+  const date1 = new Date(startDate);
+  const date2 = new Date(endDate);
+
+  let diff = date2.getTime() - date1.getTime();
+    let weekDiff = Math.floor(diff/1000/60/60/24/7);
+    diff -= weekDiff*1000*60*60*24*7;
+            
+    let daysDiff = Math.floor(diff/1000/60/60/24);
+
+    console.log('difference = ' +
+    weekDiff + ' week/s ' + 
+      daysDiff + ' day/s ');
+}
+
+function dateDifference4(startDate, endDate) {
+  const date1 = new Date(startDate);
+  const date2 = new Date(endDate);
+
+  let diff = date2.getTime() - date1.getTime();
+            
+    let daysDiff = Math.floor(diff/1000/60/60/24);
+
+    console.log('difference = ' +
+      daysDiff + ' day/s ');
+}
+
+function dateDifference5(startDate, endDate) {
+  const date1 = new Date(startDate);
+  const date2 = new Date(endDate);
+
+  let diff = date2.getTime() - date1.getTime();
+            
+    let daysDiff = Math.floor(diff/1000/60/60);
+
+    console.log('difference = ' +
+      daysDiff + ' hours/s ');
+}
+
+const startDate = '07/01/2018';
+const endDate = '05/03/2020';
+dateDifference1(startDate, endDate);
+    </script>
+  </head>
+</html>

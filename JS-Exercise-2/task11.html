@@ -1,0 +1,19 @@
+<!-- Task10 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function insertStr() {
+          let arr = static_string.split("");
+          arr.splice(input_position - 1, 0, input_string);
+          return arr.join("");
+        }
+
+        let static_string = "This is a sample string";
+        let input_string = "Insert me";
+        let input_position = 3;
+
+        console.log(insertStr());
+    </script>
+  </head>
+</html>

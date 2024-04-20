@@ -1,0 +1,27 @@
+<!-- Task8 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function dateDifference(startDate, endDate) {
+  const date1 = new Date(startDate);
+  const date2 = new Date(endDate);
+
+  const diff = date2.getTime() - date1.getTime();
+
+    const yearDiff = Math.floor(diff/1000/60/60/24/30/12);
+    const monthDiff = Math.floor(diff/1000/60/60/24/30) % 12;
+    const daysDiff = Math.floor(diff/1000/60/60/24) % 30.5;
+
+    console.log('difference = ' +
+    yearDiff + ' Year/s ' +  
+    monthDiff + ' Month/s ' + 
+      daysDiff + ' day/s ');
+}
+
+const startDate = '07/01/2018';
+const endDate = '05/03/2020';
+dateDifference(startDate, endDate);
+    </script>
+  </head>
+</html>

@@ -1,0 +1,26 @@
+<!-- Task1.1 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function validateEmail(mail, n) {
+            if (!mail.includes("@") ||
+            mail.includes(" ") ||
+        !mail.includes(".") ||
+        mail.indexOf("@") != mail.lastIndexOf("@") || 
+        mail.lastIndexOf("@") > mail.lastIndexOf(".") || 
+        mail[0] == " " || mail[0] == "." || 
+        mail[n - 1] == " " || mail[n - 1] == ".") {
+            return false;
+        }
+
+        return true;
+        }
+
+        const mail = prompt("Enter ur email: ");
+        const n = mail.length;
+        
+        console.log(validateEmail(mail, n));
+    </script>
+  </head>
+</html>

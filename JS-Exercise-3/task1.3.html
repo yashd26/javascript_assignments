@@ -1,0 +1,31 @@
+<!-- Task1.3 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function removeTags(val) {
+            const valArr = val.split("");
+            const n = valArr.length;
+
+            for(let i = 0; i < n; ++i) {
+                if (valArr[i] == "<") {
+                    let j = i;
+
+                    while(valArr[j] !== ">") {
+                        j++;
+                    }
+
+                    valArr.splice(i, j - i + 1);
+                    i--;
+                }
+            }
+
+            val = valArr.join("");
+            console.log(val);
+        }
+
+        let val = prompt("Enter ur val: ");
+        removeTags(val);
+    </script>
+  </head>
+</html> 

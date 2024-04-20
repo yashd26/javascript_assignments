@@ -1,0 +1,58 @@
+<!-- Task1.4 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        border: 2px solid black;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="table-container"></div>
+  
+    <script>
+      function generateTable(row, col) {  
+let table = '<table>';  
+  for(let i = 0; i < row; ++i) {
+  table += "<tr>";
+    for(let j = 0; j < col; ++j) {
+    table += `<td>Row-${i} Column-${j}</td>`;  
+  }
+  
+  table += "</tr>";
+}  
+table += '</table>';  
+return table;  
+}  
+
+function createTable(row, col) {
+  const table = document.createElement("table");
+  for(let i = 0; i < row; ++i) {
+    const tableRow = document.createElement("tr");
+    for(let j = 0; j < col; ++j) {
+      const cell = document.createElement("td");
+      cell.innerHTML = `Row-${i} Column-${j}`;
+      tableRow.appendChild(cell);
+    }
+    table.appendChild(tableRow);
+  }
+
+  document.body.appendChild(table);
+}
+
+    const row = +prompt("Enter row: ");
+    const col = +prompt("Enter col: ");
+    
+    // const tableContainer = document.getElementById("table-container");  
+    // tableContainer.innerHTML = generateTable(row, col);
+
+    createTable(row, col);
+</script>
+
+  </body>
+</html> 

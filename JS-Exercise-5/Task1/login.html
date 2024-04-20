@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="loginStyles.css">
+</head>
+<body onload="onLoad()">
+<div class="container">
+    <h2>Login</h2>
+    <form action="" method="post" onsubmit="handleSubmit(event)">
+        <label for="userName">User Name:</label>
+        <input type="text" id="userName" name="email" placeholder="Enter your User Name">
+
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="password" placeholder="Enter your password">
+
+        <input type="submit" value="Login">
+    </form>
+    <p>Haven't logged in yet?? <a href="signUp.html">SignUp here</a></p>
+</div>
+
+<script src="login.js"></script>
+</body>
+</html>

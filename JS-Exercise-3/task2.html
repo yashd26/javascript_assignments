@@ -1,0 +1,43 @@
+<!-- Task2 -->
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <script>
+        function helper() {
+            const sportsMap = {};
+players.forEach(player => {
+  player.Sports.forEach(sport => {
+
+    if (!sportsMap[sport]) {
+      sportsMap[sport] = [];
+    }
+    sportsMap[sport].push(player.Name);
+  });
+});
+
+const output = Object.keys(sportsMap).map(sport => ({
+  [sport]: sportsMap[sport]
+}));
+
+console.log(output);
+}
+
+const players = [
+  {
+    Name: 'Ravindra',
+    Sports: ['Chess', 'Cricket'],
+  },
+  {
+    Name: 'Ravi',
+    Sports: ['Cricket', 'Football'],
+  },
+  {
+    Name: 'Rishabh',
+    Sports: ['Table-Tennis', 'Football'],
+  },
+];
+
+helper();
+    </script>
+  </head>
+</html> 

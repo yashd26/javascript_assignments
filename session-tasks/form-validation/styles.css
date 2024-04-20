@@ -1,0 +1,39 @@
+form {
+    padding: 2%;
+    background-color: aliceblue;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 10%;
+}
+
+input {
+    padding: 1%;
+    margin: 2%;
+}
+
+select {
+    padding: 1%;
+margin: 2%;
+}
+
+textarea {
+    padding: 1%;
+    margin: 2%;
+}
+
+.error {
+    display: none;
+}
+
+p {
+    margin: 0%;
+    padding: 0%;
+    color: red;
+}
+
+#radioDiv p {
+    color: black;
+}
+
